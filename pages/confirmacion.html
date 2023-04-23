@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Lucia y Pedro</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../imagenes/logo.jpeg" alt="Boda Lucia y Pedro"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="informacion_evento.html" >Información Evento</a></li>
+                <li><a href="confirmacion.html" class="active">Confirmación</a></li>
+                <li><a href="mesas.html">Mesas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h2>Confirmación de asistencia</h2>
+            <p>Por favor, completa el siguiente formulario para confirmar tu asistencia a nuestra boda:</p>
+            <form id="confirmationForm" method="POST" action="/api/confirm">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="surname">Apellido:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div>
+                    <label for="accompaniment">¿Vienes acompañado/a?:</label>
+                    <select id="accompaniment" name="accompaniment">
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="diet">Restricciones alimentarias o preferencias:</label>
+                    <textarea id="diet" name="diet" placeholder="Ej: Soy vegetariano, alergia a los frutos secos..."></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar confirmación</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
