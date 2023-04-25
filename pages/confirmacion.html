@@ -25,7 +25,8 @@
         <section class="confirmation">
             <h2>Confirmación de asistencia</h2>
             <p>Por favor, completa el siguiente formulario para confirmar tu asistencia a nuestra boda:</p>
-            <form id="confirmationForm" method="POST" action="/api/confirm">
+            <form id="confirmationForm" action="http://localhost:8080/invitados" method="POST">
+                <!-- Contenido del formulario -->
                 <div>
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" required>
